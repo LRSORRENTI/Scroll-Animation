@@ -8,7 +8,7 @@
     <title>Scroll animation</title>
   </head>
   <body>
-    <h1>Scroll to view the animation</h1>
+    <h1><u>Scroll to view the animation</u></h1>
     <div class="box"><p class="par">Scroll to bottom for notes</p></div>
     <div class="box">
       <p id="par1">
@@ -41,11 +41,43 @@
         box.getBoundingClientRect
       </p>
     </div>
-    <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
+    <div class="box">
+      <p id="par1">
+        //now we select our .box's that are saved to the variable //boxed with
+        document.querySelectorAll('.box') boxes.forEach(box => { //remember,
+        forEach loops, so we're looping through the // node list here. so were
+        going to set the current box
+      </p>
+    </div>
+    <div class="box">
+      <p id="par1">
+        // with the built in method box.getBoundingClientRect //and what this
+        method does is return a 'DOMRect' object, // DOMRect meaning it
+        describes the size and shape of // a rectangle, and then it provides
+        info about //the size and shape of an element, and it's position to
+      </p>
+    </div>
+    <div class="box">
+      <p id="par1">
+        //the viewport, and in our case, we want to find out where the //top of
+        a particular box div is, so at the end we add .top, //and that will
+        return the top value const boxTop = box.getBoundingClientRect().top
+      </p>
+    </div>
+    <div class="box">
+      <p id="par1">
+        //Then after we find out where the top of the box is from above, //all
+        we need to do after that is see if the top of the box //is LESS than the
+        trigger bottom, if true then add the class of //show, if not (if it's
+        more than the trigger bottom, then remove //the class of show)
+      </p>
+    </div>
+    <div class="box">
+      <p id="par1">
+        if(boxTop < triggerBottom){ //below we're now adding the classList
+        box.classList.add('show') } else{ box.classList.remove('show') } }) }
+      </p>
+    </div>
     <div class="box"><h2>Content</h2></div>
     <div class="box"><h2>Content</h2></div>
     <div class="box"><h2>Content</h2></div>
