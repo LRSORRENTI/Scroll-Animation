@@ -10,6 +10,7 @@ body{
     align-items: center;
     justify-content: center;
     margin: 0;
+    overflow-x: hidden;
 }
 h1{
     margin: 10px;
@@ -30,7 +31,7 @@ h1{
 }
 
 .box:nth-of-type(even){
-    transform: translateX(-400%);
+    transform: translateX(-900%);
 }
 
 
@@ -39,5 +40,13 @@ h1{
     
 }
 .box h2{
-    font-size: 45px;
+    font-size: 80px;
 }
+.p{
+    font-size: 80px;
+}
+.par{
+    color: aqua;
+    font-size: 25px;
+}
+#par1{}

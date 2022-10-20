@@ -9,7 +9,38 @@
   </head>
   <body>
     <h1>Scroll to view the animation</h1>
-    <div class="box show"><h2>Content</h2></div>
+    <div class="box"><p class="par">Scroll to bottom for notes</p></div>
+    <div class="box">
+      <p id="par1">
+        const boxes = document.querySelectorAll('.box') //The above puts all the
+        .box into a node list window.addEventListener('scroll', checkBoxes)
+        //the above selects the window object to fireoff an event //when we
+        scroll
+      </p>
+    </div>
+    <div class="box">
+      <p id="par1">
+        function checkBoxes(){ //the console.log will log the current window
+        height to the //browswer console, in my case it initially logged 1048,
+        but // it could log a wide range of numbers based on the window size
+      </p>
+    </div>
+    <div class="box">
+      <p id="par1">
+        //console.log(window.innerHeight / 5 * 4) //and to create a trigger
+        point, we'll divide the window //height by 5 then multiply by 4 const
+        triggerBottom = window.innerHeight / 5 * 4
+      </p>
+    </div>
+    <div class="box">
+      <p id="par1">
+        //now we select our .box's that are saved to the variable //boxed with
+        document.querySelectorAll('.box') boxes.forEach(box => { //remember,
+        forEach loops, so we're looping through the // node list here. so were
+        going to set the current box // with the built in method
+        box.getBoundingClientRect
+      </p>
+    </div>
     <div class="box"><h2>Content</h2></div>
     <div class="box"><h2>Content</h2></div>
     <div class="box"><h2>Content</h2></div>
@@ -19,11 +50,33 @@
     <div class="box"><h2>Content</h2></div>
     <div class="box"><h2>Content</h2></div>
     <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
-    <div class="box"><h2>Content</h2></div>
+    <div class="box">
+      <p class="par">
+        Interesting to note that we can use a CSS pseudo-selector to
+        .box:nth-of-type(even){ transform: translateX(-400%);, so all of our
+        even boxes will come in from one side, and all of our odd boxes from the
+        other }
+      </p>
+    </div>
+    <div class="box">
+      <p class="par">
+        Now we also want to remove the horizontal scroll bar so we can remove it
+        by adding 'overflow-x: hidden' to our body selector in our stylesheet
+      </p>
+    </div>
 
+    <div class="box">
+      <p class="par">
+        We could use jquery for something like this, or a library like 'animate
+        on scroll', animate on scroll is a cool library as well, I just checked
+        it out
+      </p>
+    </div>
+    <div class="box">
+      <p class="par">
+        But this above is very lightweight, and it's simple to do
+      </p>
+    </div>
     <script src="/script.js"></script>
   </body>
 </html>
